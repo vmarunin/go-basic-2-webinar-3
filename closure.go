@@ -10,10 +10,10 @@ import (
 )
 
 func ExampleClosure() {
-	// ExampleClosureSimple()
+	ExampleClosureSimple()
 	// ExampleClosureLikeObject()
 	// ExampleClosureHTTPServer()
-	ExampleClosureSort()
+	// ExampleClosureSort()
 }
 
 func ExampleClosureSimple() {

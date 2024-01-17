@@ -1,13 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
 
 func ExampleDefer() {
-	// ExampleDeferStack()
+	ExampleDeferStack()
 	// ExampleDeferRegular()
 	// ExampleDeferParams()
 	// ExampleDeferReturn()
-	ExampleDeferPanic()
+	// ExampleDeferPanic()
+	ExampleDeferFile()
 }
 
 func ExampleDeferStack() {
@@ -69,4 +74,21 @@ func ExampleDeferPanic() {
 	fmt.Println("Before panic helper")
 	helperDeferPanic()
 	fmt.Println("After panic helper")
+}
+
+func ExampleDeferFile() {
+	fd, err := os.OpenFile("./defer.go", os.O_RDONLY, 0666)
+	if err != nil {
+		fmt.Println("OpenFile error", err)
+		return
+	}
+	defer fd.Close()
+
+	reader := bufio.NewReader(fd)
+	line, err := reader.ReadString('\n')
+	if err != nil {
+		fmt.Println("ReadLine error", err)
+		return
+	}
+	fmt.Println("ReadLine", line)
 }

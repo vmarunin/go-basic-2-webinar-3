@@ -4,4 +4,5 @@ func main() {
 	// ExampleSignature()
 	// ExampleClosure()
 	ExampleDefer()
+	// ExampleCycle()
 }
