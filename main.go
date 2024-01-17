@@ -1,9 +1,9 @@
 package main
 
 func main() {
-	// ExampleSignature()
+	ExampleSignature()
 	// ExampleClosure()
 	// ExampleDefer()
-	ExampleCycle()
+	// ExampleCycle()
 	// ExampleTime()
 }
