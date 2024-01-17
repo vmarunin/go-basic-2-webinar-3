@@ -8,9 +8,10 @@ import (
 )
 
 func ExampleCycle() {
-	// ExampleCyclePrimes()
+	ExampleCyclePrimes()
+	// ExampleCycleVariable()
 	// ExampleCycleFiles()
-	ExampleCycleFilesAnon()
+	// ExampleCycleFilesAnon()
 }
 
 // Дан список чисел, нужно вывести все простые числа из этого списка
@@ -32,6 +33,18 @@ NUMS_LOOP:
 	}
 
 	fmt.Println(response)
+}
+
+// Поведение переменных в цикле range поменяется в Go 1.22
+func ExampleCycleVariable() {
+	nums := []int{0, 10, 20, 30, 40, 50}
+	for i, v := range nums {
+		iCycle, vCycle := i, v
+		fmt.Println(i, v)
+		defer func() {
+			fmt.Println(iCycle, vCycle, i, v)
+		}()
+	}
 }
 
 // Дан список файлов, для существующих файлов вывести название и заголовок
