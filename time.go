@@ -6,10 +6,10 @@ import (
 )
 
 func ExampleTime() {
-	// ExampleTimeSleep()
+	ExampleTimeSleep()
 	// ExampleTimeMeasure()
 	// ExampleTimeParse()
-	ExampleTimeFriday13()
+	// ExampleTimeFriday13()
 }
 
 func ExampleTimeSleep() {
