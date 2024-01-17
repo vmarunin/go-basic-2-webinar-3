@@ -2,6 +2,6 @@ package main
 
 func main() {
 	// ExampleSignature()
-	ExampleClosure()
-	// ExampleDefer()
+	// ExampleClosure()
+	ExampleDefer()
 }
