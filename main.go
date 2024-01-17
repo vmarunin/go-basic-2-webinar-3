@@ -3,6 +3,6 @@ package main
 func main() {
 	// ExampleSignature()
 	// ExampleClosure()
-	ExampleDefer()
-	// ExampleCycle()
+	// ExampleDefer()
+	ExampleCycle()
 }

@@ -12,7 +12,7 @@ func ExampleDefer() {
 	// ExampleDeferParams()
 	// ExampleDeferReturn()
 	// ExampleDeferPanic()
-	ExampleDeferFile()
+	// ExampleDeferFile()
 }
 
 func ExampleDeferStack() {
